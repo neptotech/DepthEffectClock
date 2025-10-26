@@ -6,7 +6,7 @@ We don't use webtechnologies and are ultra efficient.
 The total build doesn't exceed 200kb. The memory is about 45mb.    
 
 # Download
-See [release]().    
+See [release](https://github.com/neptotech/DepthEffectClock/releases/tag/1.0.0).    
 **Note:** You need to have latest .NET Desktop Runtime 9.0.x, download one [here](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-9.0.10-windows-x64-installer) If you didn't have aldready  
 
 # Installation and Use
