@@ -1,0 +1,17 @@
+{
+  "imagePath": ".\\overlay.png" /*transparent overlay(make background transparent in main wallpaper)*/,
+  "wallpaper": ".\\background.jpg"/*main windows wallpaper*/,
+  "textAlign": "centre"/*centre, left, right*/,
+  "textColor": { "a": 100, "r": 255, "g": 255, "b": 255 },
+  "globalFormat": "%time" /*can be like "Hello User %time"*/,
+  "font": { "family": "Stencil", "size": 160, "style": "Bold", "unit": "Pixel" } /*go to C:\WINDOWS\Fonts in explorer*/,
+  // position wrt screen center
+  "dx": 0,
+  "dy": -50,
+  "taskbarGap": 50 /*crop bottom of image to allow taskbar visibility*/,
+  // Useful formats, see table: https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+  // Use 'Hello' inside "" to write text literally, e.g. "'Hello' dddd '\n' MMMM hh:mm:ss"
+  "withSeconds": "hh:mm:ss",
+  "withoutSeconds": "hh:mm",
+  "showSeconds": false /*without seconds uses less cpu, but effect unnoticeable*/
+}
