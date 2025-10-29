@@ -71,6 +71,8 @@ class DesktopWidgets : Form
         FormBorderStyle = FormBorderStyle.None;
         Width = Screen.PrimaryScreen.Bounds.Width;
         Height = Screen.PrimaryScreen.Bounds.Height;
+
+
         Location = new Point(0, 0);
         ShowInTaskbar = false;
         TopMost = false;
@@ -327,12 +329,14 @@ class DesktopWidgets : Form
                         g.FillPath(whiteBrush, path);
                     }
                 }
-
+                Region oldClip = g.Clip; // save old clip
+                g.SetClip(new Rectangle(0, 0, Width, Height - taskbarGap));
                 // --- Draw image on top ---
                 g.DrawImage(backgroundImageBitmap,
-                            new Rectangle(0, 0, Width, Height - taskbarGap),
+                            new Rectangle(0, 0, Width, Height),
                             new Rectangle(0, 0, backgroundImageBitmap.Width, backgroundImageBitmap.Height),
                             GraphicsUnit.Pixel);
+                g.Clip = oldClip;
             }
 
             // --- Apply to layered window ---
